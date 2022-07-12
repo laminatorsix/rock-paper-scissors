@@ -1,0 +1,85 @@
+@import url(//fonts.googleapis.com/css?family=Comic+Neue);
+@import url(//fonts.googleapis.com/css?family=Arimo);
+@import url(//fonts.googleapis.com/css?family=Charm);
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    font-family: Charm;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    font-family: 'Comic Neue';
+    font-size: 50px;
+    font-weight: bolder;
+    font-style: italic;
+    color: turquoise;
+    padding: 20px;
+    background-color: yellow;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.subheader > .text {
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.text > .upper {
+    color: yellowgreen;
+    font-size: 40px;
+}
+
+.text > .lower {
+    color: purple;
+    font-size: 30px;
+    font-family: Arimo;
+    background-color: lightgreen;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: purple;
+}
+
+.score {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Comic Neue';
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+}
+.controls {
+    display: flex;
+    gap: 50px;
+    
+}
+
+.controls .button {
+    border-style: solid;
+    border-width: 10px;
+    border-color: green;
+    box-shadow: 5px 10px ;
+}
+.comments > img {
+    display: none;
+}
+
+.start-screen {
+    display: none;
+}
