@@ -6,8 +6,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    background-image: linear-gradient(red, grey);
     font-family: Charm;
+    min-height:100vh;
+    padding: 10px;
     gap: 30px;
 }
 
@@ -58,19 +60,27 @@ body {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     font-family: 'Comic Neue';
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
     color: blue;
 }
+
+.player-score, .computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .controls {
     display: flex;
     gap: 50px;
     
 }
 
-.controls .button {
+.controls .button-play {
     border-style: solid;
     border-width: 10px;
     border-color: green;

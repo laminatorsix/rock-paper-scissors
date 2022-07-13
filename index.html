@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors</title>
-    <!-- <script src="rps_script.js"></script> -->
+    
     <link href='http://fonts.googleapis.com/css?family=Comic+Neue' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Charm' rel='stylesheet' type='text/css'>
@@ -32,17 +32,24 @@
 
     <div class="content">
         <div class="controls">
-            <img class="button" width="150" height="150" src="images/rock-rps.jpg">
-            <img class="button" width="150" height="150" src="images/paper-rps.png">
-            <img class="button" width="150" height="150" src="images/scissors-rps.png">
+            <input type="image" class="button-play" id="rock" width="150" height="150" src="images/rock-rps.jpg">
+            <input type="image" class="button-play" id="paper" width="150" height="150" src="images/paper-rps.png">
+            <input type="image" class="button-play" id="scissors" width="150" height="150" src="images/scissors-rps.png">
         </div>
         <div class="comments">
             <img class="comments good" width="200" height="200" src="images/happy-rps.jpg">
             <img class="comments bad" width="200" height="200" src="images/sad-rps.png">
         </div>
         <div class="score">
-            <div class="player-score">You:</div>
-            <div class="computer-score">Computer:</div>
+            <div class="player-score">
+                <div>You:</div>
+                <div class="score">0</div>
+            </div>
+            
+            <div class="computer-score">
+                <div>Computer:</div>
+                <div class="score">0</div>
+            </div>
         </div>
     </div>
 
@@ -54,5 +61,6 @@
     
     <audio class="button-click" src="sounds/vineboom-rps.mp3"></audio>
 
+    <script src="rps_script.js"></script> 
 </body>
 </html>
