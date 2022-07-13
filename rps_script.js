@@ -2,6 +2,10 @@ let gameOptions = ["rock", "paper", "scissors"];
 const playerScore = 0;
 const comScore = 0;
 
+function buttonPlay(){
+
+}
+
 function computerPlay(){
     let randomNo = Math.floor(Math.random() * 3);
     return gameOptions[randomNo];
@@ -32,16 +36,15 @@ function playGame(playerSelection, computerSelection){
 }
 
 function game(){
-    for(let i = 0; i < 5; i++){
-        const playerSelection = window.prompt("Choose your weapon.");
-        const computerSelection = computerPlay();
-        const gameResult = playGame(playerSelection, computerSelection);
+    const playerSelection = window.prompt("Choose your weapon.");
+    const computerSelection = computerPlay();
+    const gameResult = playGame(playerSelection, computerSelection);
 
-        if(gameResult == 0)
-            comScore++;
-        else if(gameResult == 1)
-            playerScore++;
-    }
+    if(gameResult == 0)
+        comScore++;
+    else if(gameResult == 1)
+        playerScore++;
+    
 
     if(playerScore > comScore){
         console.log("YOU WIN!!!");
@@ -53,4 +56,17 @@ function game(){
         console.log("WOW! IT'S A TIE!");
 }
 
-game();
+function playButtonClick(e){
+    const audio = document.querySelector('.button-click');
+    if(!audio) return;
+
+    //button.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+}
+const buttons = Array.from(document.querySelectorAll('.button-play'));
+buttons.forEach(button => button.addEventListener("click", playButtonClick));
+
+
+
+//game();
