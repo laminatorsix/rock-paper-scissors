@@ -22,12 +22,13 @@
     </div>
 
     <div class="subheader">
-        <img width="130" height = auto src="images/rockeyebrow-rps.jpeg">
+        <img class="sideimg1" width="200" height = auto src="images/rockeyebrow-rps.jpeg">
         <div class="text">
             <div class="upper">Ready to fight?</div>
             <div class="lower">Choose your weapon</div>
         </div>
-        <img width="130" height = auto src="images/rockeyebrow-rps.jpeg">
+        <div class="text-final">Press any key to play again</div>
+        <img class="sideimg2" width="200" height = auto src="images/rockeyebrow-rps.jpeg">
     </div>
 
     <div class="content">
@@ -36,29 +37,35 @@
             <input type="image" class="button-play" id="paper" width="150" height="150" src="images/paper-rps.png">
             <input type="image" class="button-play" id="scissors" width="150" height="150" src="images/scissors-rps.png">
         </div>
-        <div class="comments">
-            <img class="comments good" width="200" height="200" src="images/happy-rps.jpg">
-            <img class="comments bad" width="200" height="200" src="images/sad-rps.png">
-        </div>
+        
         <div class="score">
-            <div class="player-score">
+            <div class="playerscore">
                 <div>You:</div>
-                <div class="score">0</div>
+                <div id="player-score">0</div>
             </div>
             
-            <div class="computer-score">
+            <div class="computerscore">
                 <div>Computer:</div>
-                <div class="score">0</div>
+                <div id="computer-score">0</div>
             </div>
         </div>
+        
+        <div class="result">
+            <img class="win-or-lose" height="150" height=auto src="images/neutral-rps.jpg">
+            <div class="win-or-lose box">...</div>
+        </div>
+        
+        <div class="final-result"></div>
     </div>
 
-    <audio class="good" src="sounds/omgwow-rps.mp3"></audio>
-    <audio class="bad" src="sounds/wetfart-rps.mp3"></audio>
+    <audio class="middle win" data-no ="1" data-final ="0" src="sounds/heheboi-rps.mp3"></audio>
+    <audio class="middle loss" data-no="0" data-final ="0" src="sounds/wetfart-rps.mp3"></audio>
+    <audio class="middle tie" data-no="-1" data-final ="0" src="sounds/minecraftoof-rps.mp3"></audio>
 
-    <audio class="win-final" src="sounds/freebird-rps"></audio>
-    <audio class="loss-final" src="sounds/sad-violin-rps.mp3"></audio>
-    
+    <audio class="final win" data-no ="1" data-final ="1" src="sounds/freebird-rps.mp3"></audio>
+    <audio class="final loss" data-no = "0" data-final ="1" src="sounds/sad-violin-rps.mp3"></audio>
+   
+
     <audio class="button-click" src="sounds/vineboom-rps.mp3"></audio>
 
     <script src="rps_script.js"></script> 

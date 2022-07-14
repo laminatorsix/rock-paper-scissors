@@ -5,11 +5,17 @@
 body {
     display: flex;
     flex-direction: column;
+    align-content: start;
+    justify-content: center;
     align-items: center;
-    background-image: linear-gradient(red, grey);
+    background-image: linear-gradient(red, yellow);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Charm;
-    min-height:100vh;
     padding: 10px;
+    padding-bottom: 0;
     gap: 30px;
 }
 
@@ -56,11 +62,20 @@ body {
     border-color: purple;
 }
 
+.text-final {
+    display: none;
+    margin-top: 40px;
+    color: white;
+    font-size: 40px;
+    font-family: Arimo;
+    font-weight: bold;
+}
 .score {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
     font-family: 'Comic Neue';
     font-size: 40px;
     font-weight: bold;
@@ -68,14 +83,22 @@ body {
     color: blue;
 }
 
-.player-score, .computer-score {
+.playerscore, .computerscore {
+    width: 400px;
+    max-width: 400px;
+}
+
+.content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+
 .controls {
     display: flex;
+    justify-content: center;
     gap: 50px;
     
 }
@@ -85,7 +108,70 @@ body {
     border-width: 10px;
     border-color: green;
     box-shadow: 5px 10px ;
+    transition: all .07s ease; 
 }
+
+.result {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.box {
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+    padding: 25px;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.box:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid green;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid green;
+    left: -20px;
+    bottom: 40px;
+}
+
+
+div .final-result {
+    font-size: 90px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+.fadeIn {
+    opacity:0;
+    transform: translateY(30px);
+    animation: fadeIn 3s ease-out forwards;
+}
+
+@keyframes fadeIn{
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.playing {
+    transform: scale(1.1);
+}
+
 .comments > img {
     display: none;
 }
