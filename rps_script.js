@@ -105,6 +105,7 @@ function displayFinalResult(final){
         document.querySelector("img.sideimg2").src = "images/loser-dance.gif";
     }
 
+    audio.currentTime=0;
     audio.play();
 }
 
